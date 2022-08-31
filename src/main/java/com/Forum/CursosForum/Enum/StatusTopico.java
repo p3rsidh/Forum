@@ -1,5 +1,5 @@
 package com.Forum.CursosForum.Enum;
 
-public class StatusTopico {
-    //NAO_RESPONDIDO, NAO_SOLUNCIONADO, SOLUCIONADO, FECHADO;
+public enum StatusTopico {
+    NAO_RESPONDIDO, NAO_SELECIONADO, SOLUCIONADO, FECHADO;
 }
