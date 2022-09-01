@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class CursoService {
@@ -14,12 +13,12 @@ public class CursoService {
     @Autowired
     private CursoRepository cursoRepository;
 
-    public List<CursoModel> encontrarTodos(){
-        return cursoRepository.findAll();
+    public CursoModel cadastrarCurso(CursoModel cursoModel){
+        return cursoRepository.save(cursoModel);
     }
 
-    public Optional<CursoModel> encontrarPorId(Long codigo){
-        return cursoRepository.findById(codigo);
+    public List<CursoModel> encontrarTodos(){
+        return cursoRepository.findAll();
     }
 
     public List<CursoModel> encontrarPorCategoria(String categoria){
@@ -32,6 +31,17 @@ public class CursoService {
         }
         return null;
     }
+
+    public CursoModel editarCurso(CursoModel cursoModel){
+        return cursoRepository.save(cursoModel);
+    }
+
+    public List<CursoModel> deletarCurso(Long id){
+        cursoRepository.deleteById(id);
+        return encontrarTodos();
+    }
+
+
 
 
 

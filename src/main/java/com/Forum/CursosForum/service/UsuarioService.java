@@ -1,4 +1,4 @@
-package com.Forum.CursosForum.service;
+package com.Forum.CursosForum.Service;
 
 import com.Forum.CursosForum.Model.UsuarioModel;
 import com.Forum.CursosForum.Repository.UsuarioRepository;
