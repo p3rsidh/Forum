@@ -35,7 +35,8 @@ public class UsuarioController {
     }
 
     @DeleteMapping(path = "/forum/usuarios/{codigo}")
-    public void deletarUsuario(@PathVariable Long codigo) {
+    public ResponseEntity<?> deletarUsuario(@PathVariable Long codigo) {
         usuarioService.deletar(codigo);
+        return ResponseEntity.noContent().build();
     }
 }
