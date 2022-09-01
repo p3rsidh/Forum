@@ -1,7 +1,7 @@
-package com.Forum.CursosForum.Service;
+package com.Forum.CursosForum.service;
 
-import com.Forum.CursosForum.Model.UsuarioModel;
-import com.Forum.CursosForum.Repository.UsuarioRepository;
+import com.Forum.CursosForum.model.UsuarioModel;
+import com.Forum.CursosForum.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

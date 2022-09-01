@@ -1,7 +1,7 @@
-package com.Forum.CursosForum.Service;
-import com.Forum.CursosForum.Enum.Categorias;
-import com.Forum.CursosForum.Model.CursoModel;
-import com.Forum.CursosForum.Repository.CursoRepository;
+package com.Forum.CursosForum.service;
+import com.Forum.CursosForum.enumeration.Categorias;
+import com.Forum.CursosForum.model.CursoModel;
+import com.Forum.CursosForum.repository.CursoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

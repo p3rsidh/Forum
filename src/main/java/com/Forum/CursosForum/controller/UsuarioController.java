@@ -1,6 +1,6 @@
-package com.Forum.CursosForum.Controller;
-import com.Forum.CursosForum.Model.UsuarioModel;
-import com.Forum.CursosForum.Service.UsuarioService;
+package com.Forum.CursosForum.controller;
+import com.Forum.CursosForum.model.UsuarioModel;
+import com.Forum.CursosForum.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
