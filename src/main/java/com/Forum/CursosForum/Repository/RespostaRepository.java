@@ -1,4 +1,7 @@
 package com.Forum.CursosForum.Repository;
 
-public class RespostaRepository {
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface RespostaRepository {
 }
