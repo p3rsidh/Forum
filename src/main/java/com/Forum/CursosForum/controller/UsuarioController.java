@@ -36,7 +36,7 @@ public class UsuarioController {
     }
 
     @DeleteMapping(path = "/forum/usuarios/{codigo}")
-    public ResponseEntity<Void> deletarUsuario(@PathVariable Long codigo) {
-        new ResponseEntity<>(usuarioService.deletar(codigo), HttpStatus.NO_CONTENT);
+    public void deletarUsuario(@PathVariable Long codigo) {
+        usuarioService.deletar(codigo);
     }
 }
