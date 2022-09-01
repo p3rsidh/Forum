@@ -14,15 +14,11 @@ public class RespostaService {
     @Autowired
     private RespostaRepository respostaRepository;
 
-    public List<RespostaModel>buscarTodasMensagens(){
-        return respostaRepository.findAll();
+    public List<RespostaModel> buscarTodasMensagens() {
+        return RespostaRepository.
     }
 
-    public Optional<RespostaModel> buscarPorData(Long buscarPorData){
-        return respostaRepository.findById(buscarPorData);
-    }
-
-    public RespostaModel status(RespostaModel status){
+    public RespostaModel status(RespostaModel status) {
         RespostaRepository.
     }
 }
