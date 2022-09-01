@@ -28,9 +28,11 @@ public class CursoService {
         }else if (categoria.contains("DIREITO")){
             return cursoRepository.findByCategoria(Categorias.DIREITO);
         }else if (categoria.contains("ADMINISTRACAO")){
-
+            return cursoRepository.findByCategoria(Categorias.ADMINISTRACAO);
         }
         return null;
     }
+
+
 
 }
