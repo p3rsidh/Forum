@@ -1,4 +1,4 @@
-package com.Forum.CursosForum.controller;
+package com.Forum.CursosForum.Controller;
 
 import org.springframework.web.bind.annotation.RestController;
 
