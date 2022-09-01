@@ -1,7 +1,7 @@
-package com.Forum.CursosForum.Controller;
+package com.Forum.CursosForum.controller;
 
 import com.Forum.CursosForum.Model.UsuarioModel;
-import com.Forum.CursosForum.Service.UsuarioService;
+import com.Forum.CursosForum.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

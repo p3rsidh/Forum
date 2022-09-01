@@ -1,4 +1,4 @@
-package com.Forum.CursosForum.Service;
+package com.Forum.CursosForum.service;
 
 import org.springframework.stereotype.Service;
 

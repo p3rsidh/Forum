@@ -1,4 +1,4 @@
-package com.Forum.CursosForum.Service;
+package com.Forum.CursosForum.service;
 
 public class RespostaService {
 }

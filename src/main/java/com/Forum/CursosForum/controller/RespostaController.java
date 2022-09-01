@@ -1,4 +1,4 @@
-package com.Forum.CursosForum.Controller;
+package com.Forum.CursosForum.controller;
 
 public class RespostaController {
 
