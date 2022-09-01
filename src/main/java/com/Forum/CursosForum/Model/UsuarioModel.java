@@ -12,6 +12,12 @@ public class UsuarioModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long codigo;
 
-    @Column
+    @Column(length = 20, nullable = false)
     private String nome;
+
+    @Column(length = 20, nullable = false)
+    private String email;
+
+    @Column(length = 20, nullable = false)
+    private String senha;
 }
