@@ -1,5 +1,5 @@
 package com.Forum.CursosForum.controller;
-
+import com.Forum.CursosForum.service.TopicoService;
 import com.Forum.CursosForum.model.TopicoModel;
 import com.Forum.CursosForum.service.TopicoService;
 import org.springframework.web.bind.annotation.*;
@@ -25,7 +25,12 @@ public class TopicoController {
 
     @PutMapping(path = "/forum/topicos/{codigo}")
     public TopicoModel editar(@PathVariable Long codigo, @RequestBody TopicoModel topicoModel){
-        return topicoService
+        return topicoService.editarTopicos(topicoModel);
+    }
+
+    @DeleteMapping(path = "/forum/topicos/{codigo}")
+    public List<TopicoModel> deletarTopico(@PathVariable Long id){
+        return topicoService.deletarTopico(id);
     }
 
 
