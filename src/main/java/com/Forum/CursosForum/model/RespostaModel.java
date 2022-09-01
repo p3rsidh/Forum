@@ -13,11 +13,10 @@ public class RespostaModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long Codigo;
 
     @Column(nullable = false)
     private String resposta;
-
-    private Long Codigo;
 
     @Column(nullable = false)
     private LocalDate dataCriacao;
