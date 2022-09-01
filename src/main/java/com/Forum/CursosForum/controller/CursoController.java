@@ -1,6 +1,7 @@
 package com.Forum.CursosForum.Controller;
 import com.Forum.CursosForum.Model.CursoModel;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import com.Forum.CursosForum.Service.CursoService;
 
@@ -12,8 +13,8 @@ public class CursoController {
     @Autowired
    CursoService cursoService;
 
-    @PostMapping(path = "/forum/curso/cadastrar")
-    @ResponseStatus
+    @PostMapping(path = "/forum/curso")
+    @ResponseStatus(HttpStatus.CREATED)
     public CursoModel cadastrarCurso(@RequestBody CursoModel cursoModel){
         return cursoService.cadastrarCurso(cursoModel);
     }
@@ -21,6 +22,11 @@ public class CursoController {
     @GetMapping(path = "/forum/curso/{categoria}")
     public List<CursoModel> buscarPorCategorias(@PathVariable String categoria){
         return cursoService.encontrarPorCategoria(categoria);
+    }
+
+    @GetMapping(path = "/forum/curso")
+    public List<CursoModel> buscarTodos(){
+        return cursoService.encontrarTodos();
     }
 
     @PutMapping(path = "/forum/curso/{codigo}")
