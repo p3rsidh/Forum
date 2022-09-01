@@ -1,6 +1,6 @@
-package com.Forum.CursosForum.Model;
+package com.Forum.CursosForum.model;
 
-import com.Forum.CursosForum.Enum.Categorias;
+import com.Forum.CursosForum.enumeration.Categorias;
 import lombok.Data;
 
 import javax.persistence.*;

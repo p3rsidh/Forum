@@ -1,4 +1,4 @@
-package com.Forum.CursosForum.Repository;
+package com.Forum.CursosForum.repository;
 
 import org.springframework.stereotype.Repository;
 

@@ -1,7 +1,7 @@
-package com.Forum.CursosForum.Repository;
+package com.Forum.CursosForum.repository;
 
-import com.Forum.CursosForum.Enum.Categorias;
-import com.Forum.CursosForum.Model.CursoModel;
+import com.Forum.CursosForum.enumeration.Categorias;
+import com.Forum.CursosForum.model.CursoModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.Forum.CursosForum.Enum;
+package com.Forum.CursosForum.enumeration;
 
 public enum Categorias {
     INFORMATICA, DIREITO, ADMINISTRACAO;

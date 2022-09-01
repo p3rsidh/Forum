@@ -1,6 +1,6 @@
-package com.Forum.CursosForum.Repository;
+package com.Forum.CursosForum.repository;
 
-import com.Forum.CursosForum.Model.UsuarioModel;
+import com.Forum.CursosForum.model.UsuarioModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
