@@ -1,4 +1,4 @@
-package com.Forum.CursosForum.Model.Usuario;
+package com.Forum.CursosForum.Model;
 
 import lombok.Data;
 
