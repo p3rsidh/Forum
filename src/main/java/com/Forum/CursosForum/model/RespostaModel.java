@@ -1,5 +1,6 @@
 package com.Forum.CursosForum.Model;
 
+import com.Forum.CursosForum.enumeration.StatusTopico;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -12,13 +13,21 @@ public class RespostaModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long mensagem;
+
+    @Column(nullable = false)
+    private String resposta;
+
+    private Long Codigo;
 
     @Column(nullable = false)
     private LocalDate dataCriacao;
 
     @Column(nullable = false)
-    private Boolean status;
+    private StatusTopico status;
+
+    @Column(nullable = false)
+    private Boolean solucao;
+
 
 
 }
