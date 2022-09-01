@@ -11,7 +11,7 @@ import java.util.List;
 public class TopicoService {
 
     @Autowired
-    TopicoRepository topicoRepository;
+    private TopicoRepository topicoRepository;
 
     public TopicoModel cadastrarTopico(TopicoModel topicoModel){
         return topicoRepository.save(topicoModel);

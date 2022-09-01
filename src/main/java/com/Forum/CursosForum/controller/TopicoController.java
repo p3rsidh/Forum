@@ -1,7 +1,7 @@
 package com.Forum.CursosForum.controller;
 import com.Forum.CursosForum.service.TopicoService;
 import com.Forum.CursosForum.model.TopicoModel;
-import com.Forum.CursosForum.service.TopicoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.List;
 @RestController
 public class TopicoController {
 
-    @Override
+    @Autowired
     TopicoService topicoService;
 
     @PostMapping(path = "/forum/topicos")
