@@ -27,7 +27,7 @@ public class UsuarioController {
 
     @PostMapping(path = "/forum/usuarios")
     public ResponseEntity<UsuarioModel> cadastrarUsuario(@RequestBody UsuarioModel usuarioModel) {
-        return new ResponseEntity<>(usuarioModel, HttpStatus.CREATED);
+        return new ResponseEntity<>(usuarioService.cadastrar(usuarioModel), HttpStatus.CREATED);
     }
 
     @PutMapping(path = "/forum/usuarios/{codigo}")
@@ -37,6 +37,6 @@ public class UsuarioController {
 
     @DeleteMapping(path = "/forum/usuarios/{codigo}")
     public ResponseEntity<Void> deletarUsuario(@PathVariable Long codigo) {
-        return ResponseEntity.noContent(usuarioService.deletar(codigo));
+        new ResponseEntity<>(usuarioService.deletar(codigo), HttpStatus.NO_CONTENT);
     }
 }
