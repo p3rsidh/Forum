@@ -39,14 +39,14 @@ public class RespostaController {
         return respostaService.cadastrar(resposta);
     }
 
-    @PutMapping(path = "/forum/{alterarporid}")
-    public RespostaModel alterarResposta(@RequestBody RespostaModel respostaModel, @PathVariable Long codigo){
-        return ResponseEntity.ok(respostaService.alteracao(respostaModel, Long codigo);
+    @PutMapping(path = "/forum/resposta/{codigo}")
+    public ResponseEntity<List<RespostaModel>> alterarResposta(@RequestBody RespostaModel respostaModel, @PathVariable Long codigo){
+        return ResponseEntity.ok(respostaService.alteracao(respostaModel));
     }
 
-    @DeleteMapping(path = "forum/ {alterarporid}")
-    public void deletarResposta(@PathVariable Long respostaporid) {
-        respostaService.deletar(respostaporid);
+    @DeleteMapping(path = "forum/resposta/{codigo}")
+    public void deletarResposta(@PathVariable Long codigo) {
+        respostaService.deletar(codigo);
 
     }
 

@@ -37,14 +37,15 @@ public class RespostaService {
         return respostaRepository.save(resposta);
     }
 
-    public RespostaModel alteracao(RespostaModel respostaModel, Long codigo) {
+    public List<RespostaModel> alteracao(RespostaModel respostaModel) {
 
         respostaModel.getResposta();
         respostaModel.getStatus();
         respostaModel.getSolucao();
         respostaModel.getDataCriacao();
 
-        return respostaRepository.save(respostaModel);
+        respostaRepository.save(respostaModel);
+        return buscarTodasMensagens();
     }
     public void deletar(Long respostaporid){
         respostaRepository.deleteById(respostaporid);
