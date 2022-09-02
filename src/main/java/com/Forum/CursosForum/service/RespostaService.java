@@ -1,7 +1,8 @@
 package com.Forum.CursosForum.service;
 
 import com.Forum.CursosForum.Model.RespostaModel;
-import com.Forum.CursosForum.Repository.RespostaRepository;
+import com.Forum.CursosForum.enumeration.StatusTopico;
+import com.Forum.CursosForum.repository.RespostaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,10 +16,37 @@ public class RespostaService {
     private RespostaRepository respostaRepository;
 
     public List<RespostaModel> buscarTodasMensagens() {
-        return RespostaRepository.
+        return respostaRepository.findAll();
     }
 
-    public RespostaModel status(RespostaModel status) {
-        RespostaRepository.
+    public List<RespostaModel> buscarPorStatus(StatusTopico status) {
+        return respostaRepository.findByStatus(status);
+    }
+
+    public Optional<RespostaModel> buscarPorId(Long id) {
+        return respostaRepository.findById(id);
+    }
+
+    public RespostaModel cadastrar(RespostaModel resposta) {
+        resposta.getResposta();
+        resposta.getStatus();
+        resposta.getCodigo();
+        resposta.getSolucao();
+        resposta.getDataCriacao();
+
+        return respostaRepository.save(resposta);
+    }
+
+    public RespostaModel alteracao(RespostaModel respostaModel, Long codigo) {
+
+        respostaModel.getResposta();
+        respostaModel.getStatus();
+        respostaModel.getSolucao();
+        respostaModel.getDataCriacao();
+
+        return respostaRepository.save(respostaModel);
+    }
+    public void deletar(Long respostaporid){
+        respostaRepository.deleteById(respostaporid);
     }
 }
