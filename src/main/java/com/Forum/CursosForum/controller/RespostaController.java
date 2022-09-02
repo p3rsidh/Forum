@@ -29,7 +29,7 @@ public class RespostaController {
 
     }
 
-    @PostMapping(path = "/forum/resposta")
+    @PostMapping(path = "/forum/resposta/status")
     public List<RespostaModel> buscarPorStatus(@PathVariable StatusTopico status) {
         return respostaService.buscarPorStatus(status);
     }
